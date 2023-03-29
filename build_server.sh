@@ -20,6 +20,6 @@ if [ ! -d "$BIN_DIR" ]; then
 	cp -r C3/Bin $BIN_DIR
 fi
  
-docker run -d --privileged -p 500${ID}:52935 --name c3_server_${ID} -v ${GATEWAY_DIR}:/app/gateway -v $BIN_DIR:/app/C3/Bin c3
+docker run -d --privileged -p 52935:52935 --name c3_server_${ID} -v ${GATEWAY_DIR}:/app/gateway -v $BIN_DIR:/app/C3/Bin c3
 
 
